@@ -1,0 +1,53 @@
+.ordered-list {
+  padding: 24px 32px;
+  box-shadow: 0 8px 8px 8px rgba(0, 0 ,0 ,0.25);
+  max-width: 500px;
+  margin: 24px auto;
+  font-family: "Roboto", sans-serif;
+  color: crimson;
+  border-radius: 10px;
+}
+
+.ordered-list h2{
+  font-size: 32px;
+}
+
+.ordered-list ol {
+  margin: 0;
+  padding: 0;
+  margin-top: 32px;
+  list-style: none;
+  counter-reset: web-design;
+}
+
+.ordered-list ol li{
+  margin: 28px  0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ordered-list ol li::before{
+  content: counter(web-design);
+  counter-increment: web-design;
+  margin-right: 24px;
+  font-size: 29px;
+  font-weight: bold;
+  background: darkorange;
+  padding: 10px 20px;
+  border: 8px dashed;
+  border-radius: 50%;
+  transition: all 1000ms;
+}
+
+.ordered-list ol li:hover{
+  background-color: rgb(255, 177, 81);
+  border-radius: 0 0 0 35px ;
+  transition: all 2000ms;
+}
+
+.ordered-list ol li:hover::before{
+  background-color: darkorange;
+  border-radius: 0 50%;
+  transform: scale(1) rotate(-360deg);
+}
